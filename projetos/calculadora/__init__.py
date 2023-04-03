@@ -18,16 +18,17 @@ def calcule():
         print(f"valor inválido")
     
     
-    operacoes = {'+': soma, '-': subtracao, '*': multiplicacao, '/': divisao}
+    operacoes_funcoes = {'+': soma, '-': subtracao, '*': multiplicacao, '/': divisao}
+    operacoes_nomes = ['adição', 'subtração', 'multiplicação', 'divisão']
     
     print("Escolha uma das operações (digite o caractere correspondente à operação):")
-    for operacao in operacoes.keys():
-        print(f"'{operacao}'")
+    for operacao_nome, operacao in zip(operacoes_nomes, operacoes_funcoes.keys()):
+        print(f">> '{operacao}'    ({operacao_nome}) ")
         
-    operacao_escolhida = coletar_opcao(operacoes.keys())
+    operacao_escolhida = coletar_opcao(operacoes_funcoes.keys())
         
     
     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        print(operacoes[operacao_escolhida](a,b))
+        print(operacoes_funcoes[operacao_escolhida](a,b))
     else:
         raise TypeError(f"Os inbuts 'a' e 'b' devem ser números. \n recebido a = {a}, tipo = {type(a)} \n recebido b = {b}, tipo = {type(b)}")
