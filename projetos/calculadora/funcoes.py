@@ -1,35 +1,21 @@
 # Funções
 
 def soma(a, b):
-    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        return a+b
-    else:
-        raise TypeError(f"Os inbuts 'a' e 'b' devem ser números. \n recebido a = {a}, tipo = {type(a)} \n recebido b = {b}, tipo = {type(b)}")
+    return a + b
 
 def subtracao(a, b):
-    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        return a - b
-    else:
-        raise TypeError(f"Os inbuts 'a' e 'b' devem ser números. \n recebido a = {a}, tipo = {type(a)} \n recebido b = {b}, tipo = {type(b)}")
+    return a-b
 
 def multiplicacao(a, b):
-    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        return a*b
-    else:
-        raise TypeError(f"Os inbuts 'a' e 'b' devem ser números. \n recebido a = {a}, tipo = {type(a)} \n recebido b = {b}, tipo = {type(b)}")
+    return a*b
 
 def divisao(a,b):
-    if isinstance(a, (int, float)) and isinstance(b, (int,float)) and b != 0:
+    if b != 0:
         return a/b
-    elif b == 0:
-        raise ZeroDivisionError(f"O divisor 'b' deve ser diferente de zero. \n recebido b = {b}")
     else:
-        raise TypeError(f"Os inbuts 'a' e 'b' devem ser números. \n recebido a = {a}, tipo = {type(a)} \n recebido b = {b}, tipo = {type(b)}")
-
+        raise ZeroDivisionError(f"O divisor ('b') deve ser diferente de zero. \n recebido b = {b}")
+    
         
-
-
-
 # Funções auxiliares
 
 def checar_validade(opcao, opcoes):
@@ -39,7 +25,7 @@ def checar_validade(opcao, opcoes):
 def coletar_opcao(opcoes):
     while True:
         try: 
-            opcao = input('> ')   
+            opcao = input('>> ')   
             checar_validade(opcao, opcoes)
 
         except:
