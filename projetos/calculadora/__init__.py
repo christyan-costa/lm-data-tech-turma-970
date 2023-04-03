@@ -18,9 +18,9 @@ def calcule():
     
     operacoes = {'+': soma, '-': subtracao}
     
-    print("Escolha uma das operações (digite o número correspondente à operação desejada):")
-    for idx, operacao in enumerate(operacoes.keys()):
-        print(f"{idx +1}: {operacao}")
+    print("Escolha uma das operações (digite o caractere correspondente à operação):")
+    for operacao in operacoes.keys():
+        print(f"'{operacao}'")
         
     operacao_escolhida = coletar_opcao(operacoes.keys())
         

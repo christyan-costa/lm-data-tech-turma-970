@@ -21,14 +21,11 @@ def checar_validade(opcao, opcoes):
 def coletar_opcao(opcoes):
     while True:
         try: 
-            opcao = int(input('> '))   
+            opcao = input('> ')   
             checar_validade(opcao, opcoes)
 
-        except ValueError:
-            print("Opção inválida! Digite um dos números no menu.")
-
         except:
-            print('Erro!') # Erro genérico (fonte a princípio desconhecida)
+            print('Erro! Digite uma das opções presentes no menu.') 
 
         else:
             return opcao
