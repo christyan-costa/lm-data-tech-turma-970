@@ -2,7 +2,7 @@ from funcoes import coletar_opcao
 from funcoes import soma
 from funcoes import subtracao
 from funcoes import multiplicacao
-
+from funcoes import divisao
 
 def calcule():
     a = input("Digite um valor numérico para 'a':")
@@ -18,7 +18,7 @@ def calcule():
         print(f"valor inválido")
     
     
-    operacoes = {'+': soma, '-': subtracao, '*': multiplicacao}
+    operacoes = {'+': soma, '-': subtracao, '*': multiplicacao, '/': divisao}
     
     print("Escolha uma das operações (digite o caractere correspondente à operação):")
     for operacao in operacoes.keys():
